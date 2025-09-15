@@ -1,0 +1,20 @@
+ <div class="tree-container">
+      <h2>Hierarchical Tree Structure</h2>
+      <ul class="tree-root">
+        <li *ngFor="let node of treeNodes">
+          {{ node.key }}
+          <ul *ngIf="node.children.length > 0" class="tree-branch">
+            <ng-container *ngTemplateOutlet="nodeTemplate; context: { nodes: node.children }"></ng-container>
+          </ul>
+        </li>
+      </ul>
+      
+      <ng-template #nodeTemplate let-nodes="nodes">
+        <li *ngFor="let node of nodes">
+          {{ node.key }}
+          <ul *ngIf="node.children.length > 0" class="tree-branch">
+            <ng-container *ngTemplateOutlet="nodeTemplate; context: { nodes: node.children }"></ng-container>
+          </ul>
+        </li>
+      </ng-template>
+    </div>
