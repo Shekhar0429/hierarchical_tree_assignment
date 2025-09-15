@@ -72,8 +72,8 @@ src/
 ## Installation & Setup
 
 ### Prerequisites
-- Node.js (v16 or higher)
-- Angular CLI (v17 or higher)
+- Node.js (v14 or higher)
+- Angular CLI (v12 or higher)
 - npm or yarn package manager
 
 ### Steps to Run
